@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-rey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-grey);
+  min-height: 100vh;
+}
+.card {
+  background-color: white;
+  width: 600px;
+  border-radius: 1rem 1rem 6rem 1rem;
+  margin: 0 auto;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+  justify-content: center;
+}
+form {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 1rem;
+  gap: 1rem;
+}
+
+.cal-result {
+  margin: 2rem 1rem;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 4rem;
+}
+.cal-result span {
+  color: var(--Purple);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+hr {
+  width: 80%;
+  margin-left: 1rem;
+}
+
+button {
+  padding: 14px;
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  border-radius: 50%;
+  background-color: var(--Purple);
+  border-style: none;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--Off-black);
+}
+button img {
+  width: 1.5rem;
+}
+
+section label {
+  font-size: 0.6rem;
+  font-weight: normal;
+  color: var(--Smokey-rey);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  border: 2px solid var(--Light-grey);
+  border-radius: 3px;
+  align-items: center;
+  width: 100px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+input:hover {
+  border: 2px solid var(--Purple);
+  cursor: pointer;
+}
+
+input.invalid {
+  /*像这样表达，就会针对的只把这个class加到这一个特定的element*/
+  border: 2px solid var(--Light-red);
+}
+
+.error {
+  color: var(--Light-red);
+  font-size: 0.5rem;
+  font-weight: 400i;
+  margin-top: 0.4rem;
+  
+}
+
+
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5rem 0.5rem;
+    background-color: var(--Off-white);
+  }
+  .card {
+    width: 250px;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .container {
+    margin: 0;
+    position: relative;
+  }
+
+  .cal-result{
+    display: flex;
+    flex-direction: column;
+    font-size:3rem ;
+  }
+  form {
+    gap: 0;
+    margin-bottom: 0;
+  }
+  input {
+    width: 65%;
+  }
+
+  section {
+    width: 50%;
+  }
+  button {
+    position: relative; /* relative to who?*/
+    top: 2rem;
+    width: 15%;
+    left: 9rem;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: var(--Off-black);
+  }
+}
